@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,7 +21,7 @@
                                 <rect key="frame" x="349" y="107" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="91" y="79" width="290" height="30"/>
                                 </variation>
                             </textField>
@@ -28,7 +29,7 @@
                                 <rect key="frame" x="332" y="285" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="91" y="119" width="290" height="30"/>
                                 </variation>
                             </textField>
@@ -37,7 +38,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="26" y="83" width="45" height="21"/>
                                 </variation>
                             </label>
@@ -46,7 +47,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="20" y="122" width="51" height="21"/>
                                 </variation>
                             </label>
@@ -55,16 +56,13 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="94" y="28" width="213" height="36"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBj-Rm-mns">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Calculate Area">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="150" y="166" width="100" height="30"/>
                                 </variation>
                             </button>
@@ -73,22 +71,88 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="179" y="209" width="10" height="21"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="204" y="212" width="10" height="83"/>
                                 </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X90-70-nHz" firstAttribute="top" secondItem="pae-az-cwb" secondAttribute="bottom" constant="10" id="7dz-zi-wph"/>
+                            <constraint firstItem="3vM-WV-xLu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="BG3-UQ-eRN"/>
+                            <constraint firstItem="a7s-hn-ddi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="C1A-MS-1qh"/>
+                            <constraint firstAttribute="centerX" secondItem="a7s-hn-ddi" secondAttribute="centerX" constant="-0.5" id="Cm9-Zj-bfA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pae-az-cwb" secondAttribute="trailing" constant="3" id="DKt-zg-Wl5"/>
+                            <constraint firstItem="pae-az-cwb" firstAttribute="trailing" secondItem="X90-70-nHz" secondAttribute="trailing" id="DmT-ch-FML"/>
+                            <constraint firstItem="X90-70-nHz" firstAttribute="leading" secondItem="3vM-WV-xLu" secondAttribute="trailing" constant="20" id="Fp0-6O-lw5"/>
+                            <constraint firstItem="ZBj-Rm-mns" firstAttribute="centerX" secondItem="a7s-hn-ddi" secondAttribute="centerX" id="G26-1H-L29"/>
+                            <constraint firstItem="pae-az-cwb" firstAttribute="top" secondItem="a7s-hn-ddi" secondAttribute="bottom" constant="15" id="GS1-g0-wSw"/>
+                            <constraint firstItem="3Nx-W7-1r3" firstAttribute="trailing" secondItem="3vM-WV-xLu" secondAttribute="trailing" id="ONC-Cg-Qpu"/>
+                            <constraint firstItem="ZBj-Rm-mns" firstAttribute="top" secondItem="X90-70-nHz" secondAttribute="bottom" constant="17" id="VBa-JY-kbQ"/>
+                            <constraint firstAttribute="centerX" secondItem="LnO-82-XRc" secondAttribute="centerX" constant="16" id="Xhf-cw-6C0"/>
+                            <constraint firstAttribute="centerY" secondItem="LnO-82-XRc" secondAttribute="centerY" constant="77.5" id="Ywr-ct-PjU"/>
+                            <constraint firstAttribute="centerX" secondItem="LnO-82-XRc" secondAttribute="centerX" constant="-9" id="dK7-P2-4PJ"/>
+                            <constraint firstItem="3vM-WV-xLu" firstAttribute="top" secondItem="3Nx-W7-1r3" secondAttribute="bottom" constant="18" id="dwg-VT-mD9"/>
+                            <constraint firstAttribute="centerX" secondItem="LnO-82-XRc" secondAttribute="centerX" constant="16" id="eRP-Et-sNQ"/>
+                            <constraint firstItem="X90-70-nHz" firstAttribute="leading" secondItem="pae-az-cwb" secondAttribute="leading" id="sie-2f-5M6"/>
+                            <constraint firstItem="pae-az-cwb" firstAttribute="leading" secondItem="3Nx-W7-1r3" secondAttribute="trailing" constant="20" id="tts-m4-3lg"/>
+                            <constraint firstItem="LnO-82-XRc" firstAttribute="top" secondItem="ZBj-Rm-mns" secondAttribute="bottom" constant="13" id="uPk-XH-N3m"/>
+                            <constraint firstItem="X90-70-nHz" firstAttribute="baseline" secondItem="3vM-WV-xLu" secondAttribute="baseline" id="zF2-Kp-BhN"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ZBj-Rm-mns"/>
                                 <exclude reference="LnO-82-XRc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ONC-Cg-Qpu"/>
+                                <exclude reference="C1A-MS-1qh"/>
+                                <exclude reference="Cm9-Zj-bfA"/>
+                                <exclude reference="DKt-zg-Wl5"/>
+                                <exclude reference="DmT-ch-FML"/>
+                                <exclude reference="GS1-g0-wSw"/>
+                                <exclude reference="tts-m4-3lg"/>
+                                <exclude reference="BG3-UQ-eRN"/>
+                                <exclude reference="dwg-VT-mD9"/>
+                                <exclude reference="7dz-zi-wph"/>
+                                <exclude reference="Fp0-6O-lw5"/>
+                                <exclude reference="sie-2f-5M6"/>
+                                <exclude reference="zF2-Kp-BhN"/>
+                                <exclude reference="G26-1H-L29"/>
+                                <exclude reference="VBa-JY-kbQ"/>
+                                <exclude reference="Xhf-cw-6C0"/>
+                                <exclude reference="Ywr-ct-PjU"/>
+                                <exclude reference="dK7-P2-4PJ"/>
+                                <exclude reference="eRP-Et-sNQ"/>
+                                <exclude reference="uPk-XH-N3m"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="ZBj-Rm-mns"/>
                                 <include reference="LnO-82-XRc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ONC-Cg-Qpu"/>
+                                <include reference="C1A-MS-1qh"/>
+                                <include reference="Cm9-Zj-bfA"/>
+                                <include reference="DKt-zg-Wl5"/>
+                                <include reference="DmT-ch-FML"/>
+                                <include reference="GS1-g0-wSw"/>
+                                <include reference="tts-m4-3lg"/>
+                                <include reference="BG3-UQ-eRN"/>
+                                <include reference="dwg-VT-mD9"/>
+                                <include reference="7dz-zi-wph"/>
+                                <include reference="Fp0-6O-lw5"/>
+                                <include reference="sie-2f-5M6"/>
+                                <include reference="zF2-Kp-BhN"/>
+                                <include reference="G26-1H-L29"/>
+                                <include reference="VBa-JY-kbQ"/>
+                                <include reference="Xhf-cw-6C0"/>
+                                <include reference="Ywr-ct-PjU"/>
+                                <include reference="dK7-P2-4PJ"/>
+                                <include reference="eRP-Et-sNQ"/>
+                                <include reference="uPk-XH-N3m"/>
                             </mask>
                         </variation>
                     </view>
