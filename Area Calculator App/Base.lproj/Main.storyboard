@@ -21,16 +21,23 @@
                                 <rect key="frame" x="349" y="107" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="91" y="79" width="290" height="30"/>
-                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X90-70-nHz">
                                 <rect key="frame" x="332" y="285" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="A3I-rp-s2h"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="91" y="119" width="290" height="30"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="A3I-rp-s2h"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="A3I-rp-s2h"/>
+                                    </mask>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Width" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nx-W7-1r3">
@@ -38,18 +45,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="26" y="83" width="45" height="21"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vM-WV-xLu">
                                 <rect key="frame" x="256" y="267" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="20" y="122" width="51" height="21"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Area Calculator" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7s-hn-ddi">
                                 <rect key="frame" x="256" y="42" width="42" height="21"/>
@@ -62,7 +63,7 @@
                                 <state key="normal" title="Calculate Area">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="150" y="166" width="100" height="30"/>
                                 </variation>
                             </button>
@@ -87,6 +88,7 @@
                             <constraint firstItem="X90-70-nHz" firstAttribute="leading" secondItem="3vM-WV-xLu" secondAttribute="trailing" constant="20" id="Fp0-6O-lw5"/>
                             <constraint firstItem="ZBj-Rm-mns" firstAttribute="centerX" secondItem="a7s-hn-ddi" secondAttribute="centerX" id="G26-1H-L29"/>
                             <constraint firstItem="pae-az-cwb" firstAttribute="top" secondItem="a7s-hn-ddi" secondAttribute="bottom" constant="15" id="GS1-g0-wSw"/>
+                            <constraint firstItem="3Nx-W7-1r3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="63" id="IWe-hU-Flp"/>
                             <constraint firstItem="3Nx-W7-1r3" firstAttribute="trailing" secondItem="3vM-WV-xLu" secondAttribute="trailing" id="ONC-Cg-Qpu"/>
                             <constraint firstItem="ZBj-Rm-mns" firstAttribute="top" secondItem="X90-70-nHz" secondAttribute="bottom" constant="17" id="VBa-JY-kbQ"/>
                             <constraint firstAttribute="centerX" secondItem="LnO-82-XRc" secondAttribute="centerX" constant="16" id="Xhf-cw-6C0"/>
@@ -105,6 +107,7 @@
                                 <exclude reference="LnO-82-XRc"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="IWe-hU-Flp"/>
                                 <exclude reference="ONC-Cg-Qpu"/>
                                 <exclude reference="C1A-MS-1qh"/>
                                 <exclude reference="Cm9-Zj-bfA"/>
@@ -133,6 +136,7 @@
                                 <include reference="LnO-82-XRc"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="IWe-hU-Flp"/>
                                 <include reference="ONC-Cg-Qpu"/>
                                 <include reference="C1A-MS-1qh"/>
                                 <include reference="Cm9-Zj-bfA"/>
@@ -148,10 +152,10 @@
                                 <include reference="zF2-Kp-BhN"/>
                                 <include reference="G26-1H-L29"/>
                                 <include reference="VBa-JY-kbQ"/>
-                                <include reference="Xhf-cw-6C0"/>
+                                <exclude reference="Xhf-cw-6C0"/>
                                 <include reference="Ywr-ct-PjU"/>
                                 <include reference="dK7-P2-4PJ"/>
-                                <include reference="eRP-Et-sNQ"/>
+                                <exclude reference="eRP-Et-sNQ"/>
                                 <include reference="uPk-XH-N3m"/>
                             </mask>
                         </variation>
