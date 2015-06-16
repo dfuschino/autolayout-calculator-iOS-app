@@ -20,6 +20,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var widthTextField: UITextField!
 
+    @IBOutlet weak var heightTextField: UITextField!
+    @IBOutlet weak var outputLabel: UILabel!
+    @IBAction func buttonPress(sender: AnyObject) {
+        println("button pressed")
+        if let width = widthTextField.text.toInt(){
+            if let height = heightTextField.text.toInt(){
+                println("Valid input! \(width) x \(height)")
+                var area = width * height
+                outputLabel.text = "\(area)"
+            }
+        }
+    }
 }
 
